@@ -1,5 +1,5 @@
 import { MedusaError, Validator } from "medusa-core-utils"
-import { defaultRelations, defaultFields } from "./"
+import { defaultFields, defaultRelations } from "./"
 
 /**
  * @oas [post] /order/{id}/claims
@@ -332,7 +332,7 @@ export default async (req, res) => {
           idempotencyKey.idempotency_key,
           {
             recovery_point: "finished",
-            response_code: 500,
+            response_code: 505,
             response_body: { message: "Unknown recovery point" },
           }
         )
